@@ -17,8 +17,10 @@ class ProfilPenyewaJasa extends Migration
         Schema::create('profil_penyewa_jasa',function ( Blueprint $table ){
            $table->increments('id');
            $table->integer('id_akun');
+           $table->string('nomorKTP_penyewa_jasa');
            $table->string('nama_penyewa_jasa');
            $table->string('alamat_penyewa_jasa');
+            $table->timestamps();
         });
     }
 

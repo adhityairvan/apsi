@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Pegawai extends Migration
+class ProfilPegawai extends Migration
 {
     /**
      * Run the migrations.
@@ -14,6 +14,12 @@ class Pegawai extends Migration
     public function up()
     {
         //
+        Schema::create('pegawai', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('akun_id');
+            $table->string('nama_pegawai');
+            $table->string('nomorKTP_pegawai');
+        });
     }
 
     /**
@@ -24,5 +30,6 @@ class Pegawai extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('pegawai');
     }
 }

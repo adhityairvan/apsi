@@ -14,12 +14,18 @@ class ProfilTenagaKerja extends Migration
     public function up()
     {
         //
-        Schema::create('profil_tenaga_kerja', function (Blueprint $table) {
-           $table->increments('id');
-           $table->integer('akun_id');
-           $table->string('nama_pegawai');
-           $table->string('nomorKTP_pegawai');
+        Schema::create('profil_tenaga_kerja', function ( Blueprint $table ){
+            $table->increments('id');
+            $table->integer('nomorKTP_tenaga_kerja');
+            $table->string('nama_tenaga_kerja');
+            $table->string('alamat_tenaga_kerja');
+            $table->date('tanggal_lahir_tenaga_kerja');
+            $table->string('pendidikan_terakhir');
+            $table->string('domisili');
+            $table->integer('pengalaman_kerja');
+            $table->timestamps();
         });
+
     }
 
     /**

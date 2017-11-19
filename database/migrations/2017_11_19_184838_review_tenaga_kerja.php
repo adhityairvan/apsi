@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class LaporanKeuangan extends Migration
+class ReviewTenagaKerja extends Migration
 {
     /**
      * Run the migrations.
@@ -14,16 +14,13 @@ class LaporanKeuangan extends Migration
     public function up()
     {
         //
-        Schema::create('laporan_keuangan',function ( Blueprint $table ){
+        Schema::create('review_tenaga_kerja', function ( Blueprint $table ){
             $table->increments('id');
-            $table->integer('id_profil_tenaga_kerja');
-            $table->date('tanggal_transaksi');
-            $table->string('tipe_transaksi');
-            $table->string('keterangan_transaksi');
-            $table->string('dari/ke_transaksi');
-            $table->integer('nominal_transaksi');
+            $table->integer('id_profil_penyewa_jasa');
+            $table->longText('isi_review');
+            $table->integer('rating_kinerja');
+            $table->integer('rating_kepuasan');
             $table->timestamps();
-
         });
     }
 
@@ -35,6 +32,6 @@ class LaporanKeuangan extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('laporan_keuangan');
+        Schema::dropIfExists('review_tenaga_kerja');
     }
 }

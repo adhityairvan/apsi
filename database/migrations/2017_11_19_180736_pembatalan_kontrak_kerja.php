@@ -14,6 +14,12 @@ class PembatalanKontrakKerja extends Migration
     public function up()
     {
         //
+        Schema::create('pembatalan_kontrak', function ( Blueprint $table ){
+            $table->increments('id');
+            $table->string('alasan_pembatalan');
+            $table->date('tanggal_konfirmasi');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,5 +30,6 @@ class PembatalanKontrakKerja extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('pembatalan_kontrak');
     }
 }

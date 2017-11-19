@@ -14,6 +14,13 @@ class DokumenPerjanjian extends Migration
     public function up()
     {
         //
+        Schema::create('dokumen_perjanjian', function ( Blueprint $table ){
+            $table->increments('nomor_dokumen');
+            $table->timestamp('tanggal_upload');
+            $table->string('nama_dokumen');
+            $table->string('lokasi_dokumen');
+            $table->timestamps();
+        });
     }
 
     /**
