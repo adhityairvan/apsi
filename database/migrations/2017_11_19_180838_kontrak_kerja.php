@@ -17,7 +17,7 @@ class KontrakKerja extends Migration
         Schema::create('kontrak_kerja', function ( Blueprint $table ){
             $table->increments('id');
             $table->integer('id_profil_tenaga_kerja');
-            $table->increments('id_profil_penyewa_jasa');
+            $table->integer('id_profil_penyewa_jasa');
             $table->integer('nomor_dokumen');
             $table->date('tanggal_mulai_kontrak');
             $table->date('tanggal_selesai_kontrak');

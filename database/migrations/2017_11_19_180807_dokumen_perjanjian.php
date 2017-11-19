@@ -31,5 +31,6 @@ class DokumenPerjanjian extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('dokumen_perjanjian');
     }
 }

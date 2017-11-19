@@ -19,7 +19,7 @@ class CreateAkunTable extends Migration
             $table->string('username');
             $table->string('password');
             $table->string('email');
-            $table->integer('tipe_akun');
+            $table->morphs('profil');
         });
     }
 
