@@ -19,16 +19,16 @@
     </button>
 
     <!-- Brand -->
-    <a class="navbar-brand" href="#">Logo</a>
+    <a class="navbar-brand" href="/">Logo</a>
 
     <!-- Links -->
     <div class="collapse navbar-collapse justify-content-end" id="nav-content">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Daftar Tenaga Kerja</a>
+                <a class="nav-link" href="/list">Daftar Tenaga Kerja</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact Us</a>
@@ -38,8 +38,8 @@
                     Akun
                 </a>
                 <div class="dropdown-menu" aria-labelledby="Preview">
-                    <a class="dropdown-item" href="#">Login</a>
-                    <a class="dropdown-item" href="#">Register</a>
+                    <a class="dropdown-item" href="/login">Login</a>
+                    <a class="dropdown-item" href="/daftar">Register</a>
                 </div>
             </li>
         </ul>

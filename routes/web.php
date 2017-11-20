@@ -62,3 +62,6 @@ Route::get('/login', function () {
 Route::get('/owner/detailkontrak', function () {
     return view('ownerpage.detailkontrak  ');
 });
+Route::get('/user/detail', function () {
+    return view('userpage.detail-booking  ');
+});
