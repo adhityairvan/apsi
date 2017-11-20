@@ -9,15 +9,15 @@ class Akun extends Model
     //
     protected $table = 'akun';
 
+    protected $fillable = [
+        'username', 'email', 'password',
+    ];
+
+    protected $hidden = ['password'];
+
     public function profil(){
 
         return $this->morphTo();
     }
-
-    public function KontrakKerja(){
-        return $this->hasMany('App\KontrakKerja','id_profil_penyewa_jasa');
-    }
-
-
 
 }

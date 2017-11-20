@@ -9,7 +9,7 @@ class DokumenPerjanjian extends Model
     //
     protected $table = 'dokumen_perjanjian';
 
-    public function kontrak(){
+    public function kontrakKerja(){
         return $this->belongsTo('App\KontrakKerja');
     }
 }

@@ -9,7 +9,7 @@ class ProfilPegawai extends Model
     //
     protected $table = 'pegawai';
 
-    public function Akun(){
+    public function akun(){
         return $this->morphOne('App\Akun','profil');
     }
     public function laporanKeuangan(){

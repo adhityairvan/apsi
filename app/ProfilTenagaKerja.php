@@ -13,7 +13,7 @@ class ProfilTenagaKerja extends Model
         return $this->hasMany('App\KontrakKerja','id_profil_tenaga_kerja');
     }
 
-    public function Booking(){
+    public function booking(){
         return $this->hasOne('App\Booking','id_profil_tenaga_kerja');
     }
 
