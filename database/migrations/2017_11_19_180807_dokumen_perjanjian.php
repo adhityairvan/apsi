@@ -16,6 +16,7 @@ class DokumenPerjanjian extends Migration
         //
         Schema::create('dokumen_perjanjian', function ( Blueprint $table ){
             $table->increments('nomor_dokumen');
+            $table->integer('KontrakKerja_id');
             $table->timestamp('tanggal_upload');
             $table->string('nama_dokumen');
             $table->string('lokasi_dokumen');

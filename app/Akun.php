@@ -14,4 +14,10 @@ class Akun extends Model
         return $this->morphTo();
     }
 
+    public function KontrakKerja(){
+        return $this->hasMany('App\KontrakKerja','id_profil_penyewa_jasa');
+    }
+
+
+
 }
