@@ -16,7 +16,7 @@ class LaporanKeuangan extends Migration
         //
         Schema::create('laporan_keuangan',function ( Blueprint $table ){
             $table->increments('id');
-            $table->integer('id_profil_tenaga_kerja');
+            $table->integer('id_profil_pegawai');
             $table->date('tanggal_transaksi');
             $table->string('tipe_transaksi');
             $table->string('keterangan_transaksi');

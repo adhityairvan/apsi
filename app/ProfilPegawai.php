@@ -12,5 +12,8 @@ class ProfilPegawai extends Model
     public function Akun(){
         return $this->morphOne('App\Akun','profil');
     }
+    public function laporanKeuangan(){
+        return $this->hasMany('App\LaporanKeuangan','id_profil_pegawai');
+    }
 
 }

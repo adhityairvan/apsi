@@ -9,7 +9,7 @@ class KontrakKerja extends Model
     //
     protected $table = 'kontrak_kerja';
 
-    public function Penyewa(){
+    public function penyewa(){
         return $this->belongsTo('App/ProfilPenyewa','id_profil_penyewa_jasa');
     }
 
@@ -17,7 +17,7 @@ class KontrakKerja extends Model
         return $this->hasOne('App\DokumenPerjanjian');
     }
 
-    public function Pekerja(){
+    public function pekerja(){
         return $this->belongsTo('App\ProfilTenagaKerja','id_profil_tenaga_kerja');
     }
 
