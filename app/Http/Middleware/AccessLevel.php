@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class AccessLevelPegawai
+class AccessLevel
 {
     /**
      * Handle an incoming request.
@@ -14,9 +14,9 @@ class AccessLevelPegawai
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $role)
     {
-        if((!Auth::guest()) && (Auth::user()->profil_type == 'App\ProfilPegawai')){
+        if((!Auth::guest()) && (Auth::user()->profil_type == $role)){
             return $next($request);
         }
         else
