@@ -16,6 +16,7 @@ class PembatalanKontrakKerja extends Migration
         //
         Schema::create('pembatalan_kontrak', function ( Blueprint $table ){
             $table->increments('id');
+            $table->integer('kontrak_kerja_id');
             $table->string('alasan_pembatalan');
             $table->date('tanggal_konfirmasi');
             $table->timestamps();
