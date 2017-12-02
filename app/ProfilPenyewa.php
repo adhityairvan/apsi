@@ -20,4 +20,8 @@ class ProfilPenyewa extends Model
     public function kontrakKerja(){
         return $this->hasMany('App\KontrakKerja','id_profil_penyewa_jasa');
     }
+
+    public function review(){
+        return $this->hasMany('App\ReviewTenagaKerja','id_profil_penyewa_jasa');
+    }
 }

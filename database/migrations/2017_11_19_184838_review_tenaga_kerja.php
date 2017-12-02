@@ -17,6 +17,7 @@ class ReviewTenagaKerja extends Migration
         Schema::create('review_tenaga_kerja', function ( Blueprint $table ){
             $table->increments('id');
             $table->integer('id_profil_penyewa_jasa');
+            $table->integer('id_profil_tenaga_kerja');
             $table->longText('isi_review');
             $table->integer('rating_kinerja');
             $table->integer('rating_kepuasan');

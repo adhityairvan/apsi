@@ -17,4 +17,8 @@ class ProfilTenagaKerja extends Model
         return $this->hasOne('App\Booking','id_profil_tenaga_kerja');
     }
 
+    public function review(){
+        return $this->hasMany('App\ReviewTenagaKerja','id_profil_tenaga_kerja');
+    }
+
 }
