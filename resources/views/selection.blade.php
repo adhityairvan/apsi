@@ -34,12 +34,12 @@
                             Nama : {{$items->nama_tenaga_kerja}}
                         </div>
                         <div class="list-group-item">
-                            Umur : 16
+                            Umur : {{ $items->umur() }}
                         </div>
                         <div class="list-group-item">
                             Pengalaman Kerja : {{$items->pengalaman_kerja}}
                         </div>
-                        <a href="#" class="list-group-item list-group-item-action">Detil</a>
+                        <a href="list/profile/{{$items->id}}" class="list-group-item list-group-item-action">Detil</a>
                     </div>
                 </div>
             </div>
@@ -48,113 +48,6 @@
             @endif
 
             @endforeach
-
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="container">
-                    <img src="http://static.news.lewatmana.com/nikwil1dpn.jpg" class="img-thumbnail" alt="Sample image" style="width:200px">
-                    <div class="list-group">
-                        <div class="list-group-item ">
-                            Nama : Nikita
-                        </div>
-                        <div class="list-group-item">
-                            Umur : 16
-                        </div>
-                        <div class="list-group-item">
-                            Pengalaman Kerja : 15
-                        </div>
-                        <a href="#" class="list-group-item list-group-item-action">Detil</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="container">
-                    <img src="http://static.news.lewatmana.com/nikwil1dpn.jpg" class="img-thumbnail" alt="Sample image" style="width:200px">
-                    <div class="list-group">
-                        <div class="list-group-item ">
-                            Nama : Nikita
-                        </div>
-                        <div class="list-group-item">
-                            Umur : 16
-                        </div>
-                        <div class="list-group-item">
-                            Pengalaman Kerja : 15
-                        </div>
-                        <a href="#" class="list-group-item list-group-item-action">Detil</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="container">
-                    <img src="http://static.news.lewatmana.com/nikwil1dpn.jpg" class="img-thumbnail" alt="Sample image" style="width:200px">
-                    <div class="list-group">
-                        <div class="list-group-item ">
-                            Nama : Nikita
-                        </div>
-                        <div class="list-group-item">
-                            Umur : 16
-                        </div>
-                        <div class="list-group-item">
-                            Pengalaman Kerja : 15
-                        </div>
-                        <a href="#" class="list-group-item list-group-item-action">Detil</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="container">
-                    <img src="http://static.news.lewatmana.com/nikwil1dpn.jpg" class="img-thumbnail" alt="Sample image" style="width:200px">
-                    <div class="list-group">
-                        <div class="list-group-item ">
-                            Nama : Nikita
-                        </div>
-                        <div class="list-group-item">
-                            Umur : 16
-                        </div>
-                        <div class="list-group-item">
-                            Pengalaman Kerja : 15
-                        </div>
-                        <a href="#" class="list-group-item list-group-item-action">Detil</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="container">
-                    <img src="http://static.news.lewatmana.com/nikwil1dpn.jpg" class="img-thumbnail" alt="Sample image" style="width:200px">
-                    <div class="list-group">
-                        <div class="list-group-item ">
-                            Nama : Nikita
-                        </div>
-                        <div class="list-group-item">
-                            Umur : 16
-                        </div>
-                        <div class="list-group-item">
-                            Pengalaman Kerja : 15
-                        </div>
-                        <a href="#" class="list-group-item list-group-item-action">Detil</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="container">
-                    <img src="http://static.news.lewatmana.com/nikwil1dpn.jpg" class="img-thumbnail" alt="Sample image" style="width:200px">
-                    <div class="list-group">
-                        <div class="list-group-item ">
-                            Nama : Nikita
-                        </div>
-                        <div class="list-group-item">
-                            Umur : 16
-                        </div>
-                        <div class="list-group-item">
-                            Pengalaman Kerja : 15
-                        </div>
-                        <a href="#" class="list-group-item list-group-item-action">Detil</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
 @endsection

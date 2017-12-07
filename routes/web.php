@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('landing');
 });
 Route::get('/list',  'TenagaKerjaController@showList');
-Route::get('/list/profile', function () {
-    return view('profile');
-});
+Route::get('/list/profile/{id}', 'TenagaKerjaController@showProfile');
 
 Route::middleware(['level:App\ProfilPenyewa'])->group(function(){
     Route::get('/user/manage-kontrak', function (){
