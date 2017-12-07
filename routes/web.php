@@ -14,27 +14,37 @@
 Route::get('/', function () {
     return view('landing');
 });
-Route::get('/list', function () {
-    return view('selection');
-});
+Route::get('/list',  'TenagaKerjaController@showList');
 Route::get('/list/profile', function () {
     return view('profile');
 });
-Route::get('/daftar', function() {
-    return view('daftar');
+
+Route::middleware(['level:App\ProfilPenyewa'])->group(function(){
+    Route::get('/user/manage-kontrak', function (){
+        return view('userpage.managekontrak');
+    });
+
+    Route::get('user/manage-kontrak/upload', function () {
+        return view('userpage.uploaddokumen');
+    });
+
+    Route::get('user/manage-kontrak/batal', function () {
+        return view('userpage.pembatalan');
+    });
+
+    Route::get('user/manage-kontrak/review', function () {
+        return view('userpage.review');
+    });
+
+    Route::get('/user/detail', function () {
+        return view('userpage.detail-booking  ');
+    });
+
 });
-Route::get('/user/manage-kontrak', function (){
-    return view('userpage.managekontrak');
-});
-Route::get('user/manage-kontrak/upload', function () {
-    return view('userpage.uploaddokumen');
-});
-Route::get('user/manage-kontrak/batal', function () {
-    return view('userpage.pembatalan');
-});
-Route::get('user/manage-kontrak/review', function () {
-    return view('userpage.review');
-});
+
+
+
+
 Route::get('staff/kelola', function () {
     return view('staffpage.mengelola');
 });
@@ -56,12 +66,12 @@ Route::get('owner/profillengkap', function () {
 Route::get('staff/jadwal', function () {
     return view('staffpage.jadwal');
 });
-Route::get('/login', function () {
-    return view('login  ');
-});
 Route::get('/owner/detailkontrak', function () {
     return view('ownerpage.detailkontrak  ');
 });
-Route::get('/user/detail', function () {
-    return view('userpage.detail-booking  ');
-});
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

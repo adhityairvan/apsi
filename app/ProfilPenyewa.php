@@ -9,6 +9,10 @@ class ProfilPenyewa extends Model
     //
     protected $table = 'profil_penyewa_jasa';
 
+    protected $fillable = [
+        'id_akun', 'noKTP_penyewa_jasa', 'nama_penyewa_jasa', 'alamat_penyewa_jasa'
+    ];
+
     public function akun() {
         return $this->morphOne('App\Akun','profil');
     }

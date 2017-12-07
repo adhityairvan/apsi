@@ -23,6 +23,7 @@ class ProfilTenagaKerja extends Migration
             $table->string('pendidikan_terakhir');
             $table->string('domisili');
             $table->integer('pengalaman_kerja');
+            $table->string('photoUrl');
             $table->timestamps();
         });
 
