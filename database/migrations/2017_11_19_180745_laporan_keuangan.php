@@ -20,10 +20,8 @@ class LaporanKeuangan extends Migration
             $table->date('tanggal_transaksi');
             $table->string('tipe_transaksi');
             $table->string('keterangan_transaksi');
-            $table->string('dari/ke_transaksi');
             $table->integer('nominal_transaksi');
             $table->timestamps();
-
         });
     }
 

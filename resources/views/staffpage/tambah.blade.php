@@ -22,14 +22,14 @@
                         <div class="form-group row">
                             <label for="first_name" class="col-xs-3 col-form-label mr-2">Nama</label>
                             <div class="col-xs-9">
-                                <input type="text" class="form-control" id="first_name" name="first_name">
+                                <input type="text" class="form-control" id="first_name" name="nama">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="ttl" class="col-xs-3 col-form-label mr-2">Tempat Tanggal Lahir</label>
+                            <label for="ttl" class="col-xs-3 col-form-label mr-2">Tanggal Lahir</label>
                             <div class="col-xs-9">
-                                <input type="text" class="form-control" id="ttl" name="ttl">
+                                <input type="date" class="form-control" id="ttl" name="tanggal_lahir">
                             </div>
                         </div>
 
@@ -84,6 +84,13 @@
                             <label for="deskripsi" class="col-xs-3 col-form-label mr-2">Upload Foto</label>
                             <div class="col-xs-9">
                                 <input type="file" class="form-control-file" id="foto" name="foto">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="deskripsi" class="col-xs-3 col-form-label mr-2">Extra Foto</label>
+                            <div class="col-xs-9">
+                                <input type="file" class="form-control-file" id="foto-extra" name="foto-extra" multiple>
                             </div>
                         </div>
 

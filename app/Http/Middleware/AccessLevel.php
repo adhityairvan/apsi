@@ -14,12 +14,17 @@ class AccessLevel
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $role)
+    public function handle($request, Closure $next, $role = 'empty')
     {
-        if((!Auth::guest()) && (Auth::user()->profil_type == $role)){
+        if(Auth::check() != True ){
+            return redirect()->route('home');
+        }
+        if(Auth::user()->profil_type == $role){
             return $next($request);
         }
-        else
-            return redirect()->back();
+        else if (Auth::user()->profil_type =='owner'){
+            return $next($request);
+        }
+        else return redirect()->back();
     }
 }

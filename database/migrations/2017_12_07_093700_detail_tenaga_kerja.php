@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Booking extends Migration
+class DetailTenagaKerja extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,14 @@ class Booking extends Migration
     public function up()
     {
         //
-        Schema::create('booking',function( Blueprint $table ){
-            $table->string('id');
-            $table->date('tanggal_wawancara')->nullable();
-            $table->integer('id_profil_penyewa_jasa');
+        Schema::create('detail_tenaga_kerja',function (Blueprint $table){
+            $table->increments('id');
             $table->integer('id_profil_tenaga_kerja');
+            $table->string('deskripsi');
+            $table->string('urlImage1')->default('#');
+            $table->string('urlImage2')->default('#');
+            $table->string('urlImage3')->default('#');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +33,6 @@ class Booking extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('booking');
+        Schema::dropIfExists('detail_tenaga_kerja');
     }
 }

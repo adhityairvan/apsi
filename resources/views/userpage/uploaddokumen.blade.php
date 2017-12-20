@@ -13,10 +13,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="container">
-                    <form>
+                    <form method="POST" action="">
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label for="dokumen">Upload Dokumen</label>
-                            <input type="file" id="dokumen" class="form-control-file" aria-describedby="fileHelp">
+                            <input type="file" id="dokumen" name="dokumen" class="form-control-file" aria-describedby="fileHelp">
                             <small id="fileHelp" class="form-text text-muted">Upload dokument perjanjian dengan format docx atau pdf</small>
                         </div>
                         <button type="submit" class="btn btn-success">Submit</button>

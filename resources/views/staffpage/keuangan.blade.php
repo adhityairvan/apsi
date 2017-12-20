@@ -23,6 +23,7 @@
                         <th>Nominal</th>
                         <th>Keterangan</th>
                         <th>Penginput</th>
+                        <th>Manage</th>
                     </tr>
                     <tbody>
                     <tr>
@@ -42,9 +43,34 @@
                         </td>
 
                     </tr>
-
+                    @if(is_null($keuangan) == False)
+                        @foreach($keuangan as $row)
+                            <tr>
+                                <td>{{$row->tanggal_transaksi}}</td>
+                                <td>{{$row->tipe_transaksi}}</td>
+                                <td>Rp. {{$row->nominal_transaksi}},00</td>
+                                <td>{{$row->keterangan_transaksi}}</td>
+                                <td>{{$row->pegawai->nama_pegawai}}</td>
+                                @if(Auth::user()->profil_type == 'owner')
+                                    <td>
+                                        <a href="edit/{{$row->id}}" class="list-group-item list-group-item-action">Edit</a>
+                                    </td>
+                                    <td>
+                                        <a href="hapus/{{$row->id}}" class="list-group-item list-group-item-action">Hapus</a>
+                                    </td>
+                                @endif
+                            </tr>
+                        @endforeach
+                    @endif
                     </tbody>
                 </table>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="/staff/keuangan/tambah/"><button class="btn btn-primary">Tambah Laporan</button></a>
+                <a href="/staff/keuangan/cetak"><button class="btn btn-success">Cetak</button></a>
             </div>
         </div>
     </div>

@@ -24,6 +24,7 @@ class ProfilTenagaKerja extends Migration
             $table->string('domisili');
             $table->integer('pengalaman_kerja');
             $table->string('photoUrl');
+            $table->integer('verified')->default(0);
             $table->timestamps();
         });
 

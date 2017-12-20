@@ -18,22 +18,23 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <img src="http://static.news.lewatmana.com/nikwil1dpn.jpg" class="img-thumbnail" alt="Sample image" style="width:200px">
+                <img src="{{ asset($kontrak->pekerja->photoUrl) }}" class="img-thumbnail" alt="Sample image" style="width:200px">
                 <div class="row">
-                    <div class="col-md-4">Nama :</div>
+                    <div class="col-md-4">Nama : {{ $kontrak->pekerja->nama_tenaga_kerja }}</div>
 
                 </div>
                 <div class="row">
-                    <div class="col-md-4">Umur :</div>
+                    <div class="col-md-4">Umur : {{ $kontrak->pekerja->umur() }}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">Domisili :</div>
+                    <div class="col-md-4">Domisili : {{ $kontrak->pekerja->domisili }}</div>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="col-md-12">
                     <label for="rating">Rating Kerja</label>
-                    <form>
+                    <form method="POST" action="">
+                        {{ csrf_field() }}
                         <div class="form-group">
 
                             <div class="form-check form-check-inline">
@@ -100,9 +101,8 @@
 
                         <div class="form-group">
                             <label for="review">Review</label>
-                            <textarea class="form-control" id="reviewtenagakerja" rows="3" placeholder="Review"></textarea>
+                            <textarea class="form-control" id="reviewtenagakerja" name="reviewtenagakerja" rows="3" placeholder="Review"></textarea>
                         </div>
-
                         <button class="btn btn-success">Submit</button>
                     </form>
                 </div>
